@@ -15,6 +15,8 @@ console.log(returnFalse() && returnTrue());
 
 
 //단락평가 활용 사례
+// Truthy || Truthy 인 경우 앞의 값이 반환
+// Truthy && Truthy 인 경우 뒤의 값이 반환
 function printName(person){
     const name = person && person.name;
     console.log(name || "person의 값이 없음");

@@ -15,3 +15,13 @@ function funcA(p1, p2, p3){
     console.log(p1,p2,p3);
 }
 funcA(...arr1);
+
+
+//Rest 매개변수
+// 여러개의 매개변수를 받아올때 배열같은 걸로 한번에 받아오는것
+// 항상 Rest 매개변수가 마지막에 와야한다.
+
+function funcB(one, ...rest){
+    console.log(rest);
+}
+funcB(...arr1)
