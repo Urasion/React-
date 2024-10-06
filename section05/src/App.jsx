@@ -2,6 +2,7 @@ import './App.css'
 import Bulb from "./components/Bulb";
 import Counter from './components/Counter';
 import Register from './components/Register';
+import HookExam from './components/HookExam';
 
 //html을 반환하는 함수를 컴포넌트라 칭함
 
@@ -12,7 +13,7 @@ function App() {
 
   return (
     <>
-    <Register/>
+    <HookExam/>
     </>
   )
 }

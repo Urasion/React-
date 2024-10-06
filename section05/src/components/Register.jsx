@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useRef } from "react";
 //간단한 회원가입 폼
 //1. 이름
 //2. 생년월일
@@ -10,6 +11,8 @@ const Register=()=>{
         birth: "",
         country:"",
     })
+    const refObj = useRef();
+    
   
     const onChange = (e) =>{
         console.log(e.target.name, e.target.value);
