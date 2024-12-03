@@ -33,13 +33,33 @@ function App() {
     }
     setTodos([newTodo, ...todos])
   };
+  const onUpdate = (targetId)=>{
+    setTodos(todos.map((todo)=>{
+      if(todo.id === targetId){
+        return{
+          ...todo,idDone: !todo.isDone
+        }
+      }
+      return todo
+    }))
+  }
+  const onDelete = (targetId)=>{
+    setTodos(todos.map((todo)=>{
+      if(todo.id === targetId){
+        return{
+          ...todo,idDone: !todo.isDone
+        }
+      }
+      return todo
+    }))
+  }
 
   return (
    
     <div className='App'>
     <Header/>
-    <Editer onCreate={onCreate}/>
-    <List todos={todos}/>
+    <Editer onCreate={onCreate} />
+    <List todos={todos} onUpdate={onUpdate}/>
     </div>
 
   )
